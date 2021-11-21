@@ -1,0 +1,55 @@
+﻿@page
+@model BookStore.Pages.ShoppingModel
+@{
+    ViewData["Title"] = "Welcome To Book Store";
+}
+
+<h1>Welcome @Model.WelcomeUsername to Book Store </h1>
+
+<a asp-page="Index" asp-page-handler="Logout">Logout</a>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Number of Pages</th>
+            <th>Photo</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.allBooks)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td align="center">
+                @Html.DisplayFor(modelItem => item.Pages)
+            </td>
+            <td>
+                <img src="~/Images/@Html.DisplayFor(modelItem => item.photo)" width="120" heigh="80" />
+            </td>
+            <td>
+                SAR @Html.DisplayFor(modelItem => item.Price)
+            </td>
+
+            <td>
+                <a asp-page="cart" asp-page-handler="buynow" asp-route-id="@item.ID">Add to cart</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
