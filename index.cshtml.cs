@@ -11,9 +11,9 @@ namespace BookStore.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly BookStore.Data.UserContext _context;
+        private readonly BookStore.Data.BookStoreUserContext _context;
 
-        public IndexModel(BookStore.Data.UserContext context)
+        public IndexModel(BookStore.Data.BookStoreUserContext context)
         {
             _context = context;
         }
