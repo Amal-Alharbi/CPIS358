@@ -1,11 +1,9 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace BookStore.Models
+namespace BookStore.Data
 {
     public class Book
     {
-
         public int ID { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
@@ -14,6 +12,5 @@ namespace BookStore.Models
         public double Pages { get; set; }
         public double Price { get; set; }
         public string photo { get; set; }
-
     }
 }
