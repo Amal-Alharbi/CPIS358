@@ -1,5 +1,4 @@
-using System;
-namespace BookStore.Models
+namespace BookStore.Data
 {
     public class User
     {
