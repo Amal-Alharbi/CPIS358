@@ -1,4 +1,4 @@
-namespace BookStore.Data
+namespace BookStore.Model
 {
     public class User
     {
