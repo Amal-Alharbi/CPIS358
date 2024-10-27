@@ -1,0 +1,9 @@
+Book:
+Add-Migration InitialCreate
+Update-Database
+
+User:
+Add-Migration UserCreate –context BookStoreUserContext
+Update-Database –context BookStoreUserContext
+
+
