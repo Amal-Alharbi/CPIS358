@@ -1,3 +1,8 @@
+Add the NuGet package:
+Microsoft.EntityFrameworkCore.Design
+
+
+Migration:
 Book:
 Add-Migration InitialCreate
 Update-Database
